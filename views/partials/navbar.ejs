@@ -1,0 +1,28 @@
+<nav class="navbar border-bottom py-4 navbar-expand-lg bg-dark text-light">
+    <div class="container text-light">
+        <a class="navbar-brand text-light" href="#">
+            <img src="<%= detailsOfDb.brandIconUrl %>" alt="profile-pic" width="40" height="40"
+                class="d-inline-block align-text-top" style="border-radius: 50%;">
+            <%= detailsOfDb.brandName %>
+        </a>
+        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-light">
+                <% for(var i=0; i < detailsOfDb.links.length - 1; i++){ %>
+                    <li class="nav-item text-light">
+                        <a class="nav-link active text-light" aria-current="page" href="<%= this.url %> "
+                            title="<%= this.url%>">
+                            Home
+                        </a>
+                    </li>
+                    <% } %>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
